@@ -1,0 +1,29 @@
+.main-sidebar li.nav-item {
+    direction: rtl;
+    text-align: right;
+}
+
+body {
+    font-family: IRANSans !important;
+}
+
+.content-wrapper {
+    text-align: right;
+    direction: rtl;
+}
+
+.content-wrapper > .row {
+    padding-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+table td {
+    vertical-align: middle !important;
+}
+
+.select2-container--bootstrap4 .select2-selection__clear {
+    padding-right: .3em !important;
+    padding-left: unset !important;
+    float: left !important;
+}

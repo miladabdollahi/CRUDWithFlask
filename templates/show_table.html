@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %} {{ name_table.title }} {% endblock %}
+{% block body %}
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="table">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">{{ name_table.title }}</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div id="example1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <table id="example1" class="table table-bordered table-striped dataTable" role="grid">
+                                                        <thead>
+                                                        <tr role="row">
+                                                            {% for head in head_table %}
+                                                                {% if loop.index == 1 %}
+                                                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="{{ head.name }} : activate to sort column descending" style="width: 465px;" aria-sort="ascending">
+                                                                        {{ head.name }}
+                                                                    </th>
+                                                                {% else %}
+                                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="{{ head.name }} : activate to sort column ascending" style="width: 806px;">
+                                                                        {{ head.name }}
+                                                                    </th>
+                                                                {% endif %}
+                                                            {% endfor %}
+                                                            <th>
+                                                                CRUD
+                                                            </th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        {% for body in body_table %}
+                                                                {% if loop.index is divisibleby(2) %}
+                                                                    <tr role="row" class="even">
+                                                                        {% for tr in body %}
+                                                                            <td class="sorting_1">
+                                                                            {{ tr }}
+                                                                            </td>
+                                                                        {% endfor %}
+                                                                        <td >
+                                                                            <div class="btn-group" dir="ltr">
+                                                                                {% if loop.last %}
+                                                                                <button type="button" class="btn btn-default mx-1">
+                                                                                    <i class="fa fa-plus"></i>
+                                                                                </button>
+                                                                                {% endif %}
+                                                                                <button type="button" class="btn btn-default mx-1">
+                                                                                    <i class="fa fa-save"></i>
+                                                                                </button>
+                                                                                <button type="button" class="btn btn-default mx-1">
+                                                                                    <i class="fa fa-trash"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                {% else %}
+                                                                    <tr role="row" class="odd">
+                                                                        {% for tr in body %}
+                                                                            <td class="sorting_1">
+                                                                            {{ tr }}
+                                                                            </td>
+                                                                        {% endfor %}
+                                                                        <td >
+                                                                            <div class="btn-group" dir="ltr">
+                                                                                {% if loop.last %}
+                                                                                <button type="button" class="btn btn-default mx-1">
+                                                                                    <i class="fa fa-plus"></i>
+                                                                                </button>
+                                                                                {% endif %}
+                                                                                <button type="button" class="btn btn-default mx-1">
+                                                                                    <i class="fa fa-save"></i>
+                                                                                </button>
+                                                                                <button type="button" class="btn btn-default mx-1">
+                                                                                    <i class="fa fa-trash"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                {% endif %}
+                                                        {% endfor %}
+                                                        </tbody>
+                                                        <tfoot>
+                                                        <tr>
+                                                            {% for head in head_table %}
+                                                                <th rowspan="1" colspan="1" >
+                                                                    {{ head.name }}
+                                                                </th>
+                                                            {% endfor %}
+                                                        </tr>
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block js_files %}
+    {{ super() }}
+    <script>
+    $(function () {
+        $("#example1").DataTable({
+            "language": {
+                "paginate": {
+                    "next": "بعدی",
+                    "previous" : "قبلی"
+                }
+            },
+            "info" : false,
+        });
+    });
+</script>
+{% endblock %}
+
+

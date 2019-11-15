@@ -1,0 +1,132 @@
+.content-wrapper, .main-footer, .main-header {
+    margin-right: unset !important;
+}
+
+.list-group {
+    padding-left: unset !important;
+    padding-right: 0px !important;
+}
+
+.content-wrapper {
+    padding-top: 30px;
+}
+
+.user-block img {
+    float: right !important;
+}
+
+.description {
+    unicode-bidi: plaintext;
+}
+
+.img-fluid {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comments_card {
+    display: none;
+}
+
+.link-black:hover, .link-black:focus {
+    color: #2a2d2f;
+}
+
+.user-block .username, .user-block .description, .user-block .comment {
+    margin-left: unset !important;
+    margin-right: 50px;
+}
+
+.audio-fluid {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-fluid {
+    max-width: 100%;
+}
+
+.pagination {
+    display: none;
+}
+
+.user_search_div {
+    direction: rtl;
+    text-align: right;
+}
+
+.user_search_div img {
+    max-width: 15%;
+    margin-left: 10px;
+}
+
+.select2-search__field {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+.side_panel_avatar {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 3px solid #adb5bd;
+    background-repeat: no-repeat;
+}
+
+.user_search_panel_avatar {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid #adb5bd;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.preview_div {
+    margin-top: 20px;
+    padding-left: 0px;
+    width: 100%;
+}
+
+.post_panel_avatar {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid #adb5bd;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.send_post_btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+input[name="description"] {
+    border: none;
+}
+
+.load_image_btn , .load_sound_btn , .load_video_btn{
+    width: 20%;
+    margin-left: 10px;
+}
+
+.image_preview , .sound_preview , .video_preview {
+    display: none;
+    max-width: 40%
+}
